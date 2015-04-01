@@ -1,0 +1,12 @@
+{
+  "name": {
+    "range": "string"
+  },
+  "privateKey": {
+    "range": "string"
+  },
+  "publicKey": {
+    "required": true,
+    "range": "string"    
+  }
+}
