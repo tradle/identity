@@ -13,8 +13,8 @@ test('export/load identity', function(t) {
   var tedWKeys = Identity.fromJSON(tedPrivate);
   var signed = tedWKeys.exportSigned();
   // export a valid json
-  t.ok(signed);
-  t.ok(Identity.fromJSON(signed));
+  t.ok(signed, 'export signed identity');
+  t.ok(Identity.fromJSON(signed), 'validate exported identity');
   t.throws(ted.exportSigned.bind(ted), /missing private key/);
 });
 
@@ -38,7 +38,9 @@ test('sign with various keys', function(t) {
 
   for (var purpose in tedPublic._keys) {
     for (var key in tedPublic._keys[purpose]) {
-      t.isNot(tedWKeys.getPrivateKey(key), null);
+      utils.forEachKey(key, function(k) {
+        t.isNot(tedWKeys.getPrivateKey(k), null, 'has private key');
+      });
     }
   }
 
@@ -57,7 +59,9 @@ test('address book', function(t) {
 
   for (var purpose in tedPublic._keys) {
     for (var key in tedPublic._keys[purpose]) {
-      t.isNot(teds.byKey(key), null);
+      utils.forEachKey(key, function(k) {
+        t.isNot(teds.byKey(k), null, 'found contact by key');
+      });
     }
   }
 

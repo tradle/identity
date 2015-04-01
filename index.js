@@ -67,14 +67,9 @@ Identity.prototype.addKey = function(options) {
  * @return {KeyPair} the corresponding private key if this Identity has it, undefined otherwise
  */
 Identity.prototype.getPrivateKey = function(key, purpose) {
-  var keys = utils.getKeyRepresentations(key);
-  var found;
-
-  keys.some(function(k) {
-    return found = this._getPrivateKey(key, purpose);
+  return utils.findKey(key, function(k) {
+    return this._getPrivateKey(key, purpose);
   }, this);
-
-  return found;
 }
 
 Identity.prototype._getPrivateKey = function(key, purpose) {

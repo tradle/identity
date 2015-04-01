@@ -47,6 +47,12 @@ AddressBook.prototype.remove = function(identity) {
   }
 }
 
+AddressBook.prototype.byKey = function(key, purpose) {
+  return utils.findKey(key, function(k) {
+    return this._byKey(key, purpose);
+  }, this);
+}
+
 AddressBook.prototype._byKey = function(key, purpose) {
   var purposes;
   if (typeof purpose === 'undefined') {
@@ -61,12 +67,6 @@ AddressBook.prototype._byKey = function(key, purpose) {
   purposes.some(function(purpose) {
     var family = this._byPurpose[purpose];
     return identity = family && family[keyStr];
-  }, this);
-}
-
-AddressBook.prototype.byKey = function(key, purpose) {
-  return utils.findKey(key, function(k) {
-    return this._byKey(key, purpose);
   }, this);
 }
 
