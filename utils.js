@@ -71,6 +71,7 @@ function join(unsigned, sigs) {
 
 function verifySigs(unsigned, sigTree) {
   var stringified = stringify(unsigned);
+  // console.log('Verifying: ' + stringified);
 
   for (var p in sigTree) {
     var branch = sigTree[p];
@@ -78,7 +79,7 @@ function verifySigs(unsigned, sigTree) {
 
     if ('_sig' in branch) {
       key = ec.keyFromPublic(p, ENC);
-      if (!key.verify(stringified, branch._sig)) {
+      if (!verify(stringified, key, branch._sig)) {
         throw new Error('Failed to verify signature for public key ' + p);
       }
     }
@@ -97,10 +98,8 @@ function toPrivKey(priv) {
   return typeof priv === 'string' ? ec.keyFromPrivate(priv, ENC) : priv;
 }
 
-function verify(data, pubKey, signature) {
-  pubKey = utils.toPubKey(pubKey);
-
-  return pubKey.verify(utils.stringify(data), signature);
+function verify(data, key, signature) {
+  return toPubKey(key).verify(stringify(data), signature);
 }
 
 function sign(data, key) {
@@ -122,11 +121,29 @@ function pubKeyToString(key) {
   // compact
   if (typeof key === 'string') return key;
 
-  return key.getPublic(true, utils.ENCODING);
+  return key.getPublic(true, ENC);
+}
+
+function getKeyRepresentations(key) {
+  if (typeof key === 'string') key = toPubKey(key);
+
+  // compact and full forms
+  return [key.getPublic(true, ENC), key.getPublic(ENC)];
+}
+
+function findKey(key, fn, ctx) {
+  var match;
+  module.exports.someKey(key, function(arg, idx) {
+    return match = ctx ? fn.call(ctx, arg, idx) : fn(arg, idx);
+  });
+
+  return match;
 }
 
 module.exports = {
   ec: ec,
+  findKey: findKey,
+  getKeyRepresentations: getKeyRepresentations,
   pubKeyString: pubKeyToString,
   stringify: stringify,
   splitDataAndSigs: split,
@@ -138,4 +155,12 @@ module.exports = {
   sign: sign,
   verify: verify,
   ENCODING: ENC
-}
+};
+
+['forEach', 'some', 'every'].forEach(function(method) {
+  module.exports[method + 'Key'] = function(key, fn, ctx) {
+    var reps = getKeyRepresentations(key);
+    if (ctx) reps[method](fn, ctx);
+    else reps[method](fn);
+  }
+});

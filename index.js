@@ -67,6 +67,17 @@ Identity.prototype.addKey = function(options) {
  * @return {KeyPair} the corresponding private key if this Identity has it, undefined otherwise
  */
 Identity.prototype.getPrivateKey = function(key, purpose) {
+  var keys = utils.getKeyRepresentations(key);
+  var found;
+
+  keys.some(function(k) {
+    return found = this._getPrivateKey(key, purpose);
+  }, this);
+
+  return found;
+}
+
+Identity.prototype._getPrivateKey = function(key, purpose) {
   var purposes;
   if (typeof purpose === 'undefined') {
     purposes = Object.keys(this._keys);
@@ -141,6 +152,7 @@ Identity.prototype.signAll = function(obj) {
       var key = family[pub];
       if (!key.priv) throw new Error('missing private key for ' + pub);
 
+      // console.log('Signed: ' + str);
       sigs[pub] = {
         _sig: utils.sign(str, key)
       }
@@ -172,11 +184,6 @@ Identity.fromJSON = function(json) {
   utils.verifySigs(unsigned, sigs);
 
   return new Identity(unsigned);
-}
-
-Identity.prototype.keys = function(purpose) {
-  // dangerous, better return an immutable object
-  return this._keys[purpose];
 }
 
 module.exports = Identity;
