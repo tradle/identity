@@ -1,23 +1,29 @@
 {
   "_keys": {
-    "bitcoin": {
-      "02666f73bae8a6aa116f1e23f93d06617164c9d300019ec5e2c493cf0ad655de0d": {
-        "_sig": "3046022100a263ab07ad32ed9f1230ae316ef15cbed5bfdcb8410814baedf7a328a67d6851022100f263ce9954fd35126536b92fdb4df7242476aad4517f7607a3acc60017871046"
+    "bitcoin": [
+      {
+        "_sig": "304402205ebde1a9e1c7270868d4fe8c5b4e51597f824b37fe50000b3198e986d5b9ceac022005d5492d2f139bbb3be83a58f9e9b7d6f3de3a2483909b468aed5bbefdbe9d91",
+        "curve": "secp256k1",
+        "pub": "0355e75fa1f48b6660796a4767a27370719670357a7c0b11040e520cd4cafbfed2",
+        "type": "ec"
       }
-    },
-    "identity": {
-      "0320794ef7ade0f157dd3499eb88d6738bcb34d64900005c2fc08de824a3384de2": {
-        "_sig": "3046022100cadb1e813c5f92e8f319a7a99e90f1c3aad0ff807ac105a2e549f9d535eda12c022100ecb192108087b5168c067e0c31753d9f05695a36d6da1374f7a15711e58be602"
-      },
-      "033bbd77e22752c6e1d469b98c962f9c8388ff0937c5b9b771ceb33c6ec14978d4": {
-        "_sig": "3045022100bdda7d9f4fd2d35121376aa1d215a305336c9fd813c49ec8b7a3ba4b85850ede0220131c8ed2b09e57a8d47f8311c65570e77460ad7314b22db867bbafa598beb23c"
+    ],
+    "identity": [
+      {
+        "_sig": "3045022100d7cd415f215e131bdaab5601169c97c9a6293ab5749a1a2a416d899874f9ed510220111482bba47257628788155dcc146c475de5e9bbbdcb64b159d9c75c167d2138",
+        "curve": "secp256k1",
+        "pub": "03343b99b580e00bf980dfde6e635464354fbe94e048ba8cde47f96c89aac2621d",
+        "type": "ec"
       }
-    },
-    "litecoin": {
-      "033a8e8c0b323d2c075822697fdd3624cb5eabd129279e3d42e7d7380381659bd2": {
-        "_sig": "3046022100edf0fd7f4c9965e56561146175b1206ad570fe2ca7abaaf14c6eacfff9236283022100db009431205844fc0f8e0f72b2f973abea5d3cdad7ef34f9e6c92790e3c9dc36"
+    ],
+    "litecoin": [
+      {
+        "_sig": "3046022100fd9ded3fd9188fdeeb4f37948e5bdde22a0b0971e8d036285257d89d51c34846022100b8a3409452d6365c2fdbab22e9a80e6d5bae5e81470cc53e006a3e53849b81e7",
+        "curve": "secp256k1",
+        "pub": "02e188b5a0f1032c23d0a7c5214b16873e8c87efa5a8766c44d0f8e6094fd15605",
+        "type": "ec"
       }
-    }
+    ]
   },
   "firstName": "Ted",
   "lastName": "Logan",

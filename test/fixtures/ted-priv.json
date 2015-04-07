@@ -1,15 +1,29 @@
 {
   "_keys": {
-    "bitcoin": {
-      "02666f73bae8a6aa116f1e23f93d06617164c9d300019ec5e2c493cf0ad655de0d": "c882de5b0ed612bb79e38fc6026cfd888b81dcdddfe2f537752cb3ac0715566e"
-    },
-    "identity": {
-      "0320794ef7ade0f157dd3499eb88d6738bcb34d64900005c2fc08de824a3384de2": "a2174fcb86566c5286f5a61d4932e770e9aa3c7e4cbda5a9adff1ec69a3366fd",
-      "033bbd77e22752c6e1d469b98c962f9c8388ff0937c5b9b771ceb33c6ec14978d4": "b1f7caf35bfe46f1dacdebf43baada3374b8220d1253adfb0a91285cced339fc"
-    },
-    "litecoin": {
-      "033a8e8c0b323d2c075822697fdd3624cb5eabd129279e3d42e7d7380381659bd2": "40f5d99a3bee9d44745c8ac681d0eea117548fb213697f9b0f1b719761728b68"
-    }
+    "bitcoin": [
+      {
+        "curve": "secp256k1",
+        "priv": "f074699f0891f2c6131620f71484580a8e92fb58506ec2c038df8081169c0d55",
+        "pub": "0355e75fa1f48b6660796a4767a27370719670357a7c0b11040e520cd4cafbfed2",
+        "type": "ec"
+      }
+    ],
+    "identity": [
+      {
+        "curve": "secp256k1",
+        "priv": "5ec23a119d98bb7ebaee9ad5aa96e1f6d151f826ccaf0151bdc181849224c10f",
+        "pub": "03343b99b580e00bf980dfde6e635464354fbe94e048ba8cde47f96c89aac2621d",
+        "type": "ec"
+      }
+    ],
+    "litecoin": [
+      {
+        "curve": "secp256k1",
+        "priv": "5fdd7c4079fda14adbdadee70c8802501144c9c033a11d54130142631dc7d8d7",
+        "pub": "02e188b5a0f1032c23d0a7c5214b16873e8c87efa5a8766c44d0f8e6094fd15605",
+        "type": "ec"
+      }
+    ]
   },
   "firstName": "Ted",
   "lastName": "Logan",

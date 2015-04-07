@@ -1,10 +1,14 @@
 
-var Identity = require('../');
+var Identity = require('../lib/identity');
 var test = require('tape');
 var tedPublic = require('./fixtures/ted-pub');
 var tedPrivate = require('./fixtures/ted-priv');
-var utils = require('../utils');
-var AddressBook = require('../addressbook');
+var utils = require('../lib/utils');
+var Keys = require('../lib/keys');
+var toKey = Keys.toKey;
+var AddressBook = require('../lib/addressbook');
+
+// makeTeds();
 
 test('export/load identity', function(t) {
   t.plan(3);
@@ -23,9 +27,9 @@ test('sign with various keys', function(t) {
   var ted = Identity.fromJSON(tedPublic);
   var tedWKeys = Identity.fromJSON(tedPrivate);
 
-  var btcPubKey = firstProp(tedPublic._keys.bitcoin);
+  var btcPubKey = tedPublic._keys.bitcoin[0];
   var sig = tedWKeys.sign(msg, btcPubKey);
-  t.ok(utils.verify(msg, btcPubKey, sig));
+  t.ok(utils.verify(msg, Keys.toKey(btcPubKey), sig));
 
   // t.equal(sig, '3045022022465a0ced56b9036a227849fc35a0e03964e18d2a68c3d3bda18039019c84a3022100a96132cce68e46a0a85c2910a5dcb4320b657eb48b6c3de3a50a80d51cc42a38');
   t.throws(function() {
@@ -33,16 +37,15 @@ test('sign with various keys', function(t) {
   });
 
   t.throws(function() {
-    tedWKeys.sign(msg, utils.ec.genKeyPair().getPublic('hex'));
+    debugger;
+    tedWKeys.sign(msg, new Keys.Bitcoin({
+      pub: Keys.Bitcoin.gen().pub()
+    }));
   }, /key not found/);
 
-  for (var purpose in tedPublic._keys) {
-    for (var key in tedPublic._keys[purpose]) {
-      utils.forEachKey(key, function(k) {
-        t.isNot(tedWKeys.getPrivateKey(k), null, 'has private key');
-      });
-    }
-  }
+  ted.forEachKey(function(key) {
+    t.isNot(tedWKeys.getPrivateKey(key), null, 'has private key');
+  });
 
   t.end();
 });
@@ -57,14 +60,11 @@ test('address book', function(t) {
     teds.add(futureTed);
   }, /identity with key/);
 
-  for (var purpose in tedPublic._keys) {
-    for (var key in tedPublic._keys[purpose]) {
-      utils.forEachKey(key, function(k) {
-        t.isNot(teds.byKey(k), null, 'found contact by key');
-      });
-    }
-  }
+  ted.forEachKey(function(key) {
+    t.isNot(teds.byPubKey(key), null, 'found contact by key');
+  });
 
+  t.ok(teds.remove(ted));
   t.end();
 });
 
@@ -75,10 +75,9 @@ function makeTeds() {
     lastName: 'Logan'
   });
 
-  dude.addNewKey();
-  dude.addNewKey();
-  dude.addNewKey('bitcoin');
-  dude.addNewKey('litecoin');
+  dude.addKey(Keys.EC.gen('secp256k1'));
+  dude.addKey('bitcoin', Keys.Bitcoin.gen());
+  dude.addKey('litecoin', Keys.Bitcoin.gen());
 
   var pub = dude.exportSigned();
   var priv = dude.toJSON(true);
@@ -86,8 +85,8 @@ function makeTeds() {
   console.log(utils.stringify(priv, null, 2));
 }
 
-function firstProp(obj) {
-  for (var p in obj) {
-    if (obj.hasOwnProperty(p)) return p;
-  }
-}
+// function firstProp(obj) {
+//   for (var p in obj) {
+//     if (obj.hasOwnProperty(p)) return p;
+//   }
+// }
