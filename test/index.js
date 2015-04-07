@@ -37,9 +37,9 @@ test('sign with various keys', function(t) {
   });
 
   t.throws(function() {
-    debugger;
     tedWKeys.sign(msg, new Keys.Bitcoin({
-      pub: Keys.Bitcoin.gen().pub()
+      networkName: 'testnet',
+      pub: Keys.Bitcoin.gen('testnet').pub()
     }));
   }, /key not found/);
 
@@ -58,10 +58,10 @@ test('address book', function(t) {
   var futureTed = Identity.fromJSON(tedPublic);
   t.throws(function() {
     teds.add(futureTed);
-  }, /identity with key/);
+  }, /identity with this/);
 
   ted.forEachKey(function(key) {
-    t.isNot(teds.byPubKey(key), null, 'found contact by key');
+    t.isNot(teds.byPub(key), null, 'found contact by key');
   });
 
   t.ok(teds.remove(ted));
@@ -76,8 +76,8 @@ function makeTeds() {
   });
 
   dude.addKey(Keys.EC.gen('secp256k1'));
-  dude.addKey('bitcoin', Keys.Bitcoin.gen());
-  dude.addKey('litecoin', Keys.Bitcoin.gen());
+  dude.addKey('bitcoin', Keys.Bitcoin.gen('testnet'));
+  dude.addKey('litecoin', Keys.Bitcoin.gen('testnet'));
 
   var pub = dude.exportSigned();
   var priv = dude.toJSON(true);
