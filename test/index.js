@@ -32,7 +32,7 @@ test('sign with various keys', function(t) {
   var ted = Identity.fromJSON(tedPublic);
   var tedWKeys = Identity.fromJSON(tedPrivate);
 
-  var btcPubKey = tedPublic._keys.bitcoin[0];
+  var btcPubKey = tedPublic.pubkeys.bitcoin[0];
   var sig = tedWKeys.sign(msg, btcPubKey);
   t.ok(toKey(btcPubKey).verify(msg, sig));
 
@@ -66,7 +66,11 @@ test('address book', function(t) {
   }, /identity with this/);
 
   ted.forEachKey(function(key) {
-    t.isNot(teds.byPub(key), null, 'found contact by key');
+    t.isNot(teds.byPub(key), null, 'found contact by pubkey');
+  });
+
+  ted.forEachKey(function(key) {
+    t.isNot(teds.byFingerprint(key), null, 'found contact by key fingerprint');
   });
 
   t.ok(teds.remove(ted));

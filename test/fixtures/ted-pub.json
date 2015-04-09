@@ -1,33 +1,35 @@
 {
-  "_keys": {
+  "firstName": "Ted",
+  "lastName": "Logan",
+  "middleName": "Theodore",
+  "pubkeys": {
     "bitcoin": [
       {
-        "_sig": "304402201ea66009c0b2c425cf292e41ef9e73977f15eee118f9e609688bc0c59c63790f02206c71f3a48c306fa72bd3d055f211cd95fe9c6793faefb3ad3ef296f9272efaa7",
-        "address": "13XAyorHAR3H5PRN2caWZjtfooEBGCPzQm",
+        "_sig": "304402207e2747ef251ed197b53ae9a293f306ea0b35f5a2b17167e41a4e9966ab384a99022036b14a39283c631e460a07d68cce0db60340907b1ca90503e7550809b46b8785",
+        "fingerprint": "16YkwcRzrbcJNZHXA67X1n7FBafmBkyUEH",
         "networkName": "bitcoin",
-        "pub": "024990ba2951284c06e0a967e076a177b848f8e33e79825db2f56d2290708c21e3",
-        "type": "bitcoin"
+        "type": "bitcoin",
+        "value": "03a38a2a8d6941bcc2cb2fbecd90706f53237b2672eacec3d9a62856e8f6b85d8f"
       }
     ],
     "identity": [
       {
-        "_sig": "3045022006a10ec5c18965f04d0ea2d645e659e98d0e5f5a5468cdeda2ed8e7c0941fe3d022100bc38b1820ef4e03c065a0a57cb84a17e64d7b75de76f0939b36dac6498a4e7d2",
+        "_sig": "304402200166487ad4af282e48f3f1a810aae32437e72d3df46a644d1158d19e18321be1022065120547dec58e8ab31645f375584ba04cc48d79bcce75680a6afb0bc3e411a0",
         "curve": "secp256k1",
-        "pub": "03d83fc22558d3aae01de4335e5a40873f5df57b23669cdd1c754e6e246ab353b4",
-        "type": "ec"
+        "fingerprint": "804787ae1422728816bd4d4ae06097eff5eaa7060ca99f7a262b573c4f68fa12",
+        "type": "ec",
+        "value": "035988aae1879f01ce37b043ae7b355dc71644053a28828605c1301e611e612798"
       }
     ],
     "testnet": [
       {
-        "_sig": "30440220042e4334758960847d350ef624bcde29b858c62e77ef7c9c88938000bfd9cb6c022031c7c6bcf10eab310e4440915d19c896bcae7917da53594ce92cc84a4ced3387",
-        "address": "mpcs5uhd1xDq5AZy3cP7Gn8FqzfQjH7ghf",
+        "_sig": "3045022100bcebb9d4078628d6509579b6b3218c8e888be123bb3b16331c3e9397ea1793da022077c5d0baeb602fd314d9a3ea51e10bfb0111310fb484ba3431e236fdc1dce9dd",
+        "fingerprint": "mjVbFFdMUhZ628VdqqgKZwztE8Uw12n7Ze",
         "networkName": "testnet",
-        "pub": "02125378686a3e5f82078d42f46360d4ef8c726f2a598cd3813e19a349686535ff",
-        "type": "bitcoin"
+        "type": "bitcoin",
+        "value": "03c2e7b7f0e3f8cf7d29905605e25fb4cd5b21af502c8d0d837a13dc86e5559725"
       }
     ]
   },
-  "firstName": "Ted",
-  "lastName": "Logan",
-  "middleName": "Theodore"
+  "v": "0.3"
 }
