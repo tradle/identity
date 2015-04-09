@@ -1,14 +1,19 @@
 
+var fs = require('fs');
 var Identity = require('../lib/identity');
 var test = require('tape');
 var tedPublic = require('./fixtures/ted-pub');
 var tedPrivate = require('./fixtures/ted-priv');
-var stringify = require('tradle-utils').stringify;
+var tu = require('tradle-utils');
+var utils = require('../lib/utils');
+var stringify = tu.stringify;
+var prettify = tu.prettify;
 var Keys = require('../lib/keys');
-var toKey = Keys.toKey;
+var toKey = require('../lib/toKey');
 var AddressBook = require('../lib/addressbook');
 
 // makeTeds();
+// if (true) return;
 
 test('export/load identity', function(t) {
   t.plan(3);
@@ -75,18 +80,12 @@ function makeTeds() {
     lastName: 'Logan'
   });
 
-  dude.addKey(Keys.EC.gen('secp256k1'));
-  dude.addKey('bitcoin', Keys.Bitcoin.gen('testnet'));
-  dude.addKey('litecoin', Keys.Bitcoin.gen('testnet'));
+  dude.addKey('identity', Keys.EC.gen());
+  dude.addKey('bitcoin', Keys.Bitcoin.gen('bitcoin'));
+  dude.addKey('testnet', Keys.Bitcoin.gen('testnet'));
 
   var pub = dude.exportSigned();
   var priv = dude.toJSON(true);
-  console.log(stringify(pub, null, 2));
-  console.log(stringify(priv, null, 2));
+  fs.writeFile('./test/fixtures/ted-pub.json', prettify(pub));
+  fs.writeFile('./test/fixtures/ted-priv.json', prettify(priv));
 }
-
-// function firstProp(obj) {
-//   for (var p in obj) {
-//     if (obj.hasOwnProperty(p)) return p;
-//   }
-// }

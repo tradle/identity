@@ -2,26 +2,28 @@
   "_keys": {
     "bitcoin": [
       {
-        "_sig": "304402205ebde1a9e1c7270868d4fe8c5b4e51597f824b37fe50000b3198e986d5b9ceac022005d5492d2f139bbb3be83a58f9e9b7d6f3de3a2483909b468aed5bbefdbe9d91",
-        "curve": "secp256k1",
-        "pub": "0355e75fa1f48b6660796a4767a27370719670357a7c0b11040e520cd4cafbfed2",
-        "type": "ec"
+        "_sig": "304402201ea66009c0b2c425cf292e41ef9e73977f15eee118f9e609688bc0c59c63790f02206c71f3a48c306fa72bd3d055f211cd95fe9c6793faefb3ad3ef296f9272efaa7",
+        "address": "13XAyorHAR3H5PRN2caWZjtfooEBGCPzQm",
+        "networkName": "bitcoin",
+        "pub": "024990ba2951284c06e0a967e076a177b848f8e33e79825db2f56d2290708c21e3",
+        "type": "bitcoin"
       }
     ],
     "identity": [
       {
-        "_sig": "3045022100d7cd415f215e131bdaab5601169c97c9a6293ab5749a1a2a416d899874f9ed510220111482bba47257628788155dcc146c475de5e9bbbdcb64b159d9c75c167d2138",
+        "_sig": "3045022006a10ec5c18965f04d0ea2d645e659e98d0e5f5a5468cdeda2ed8e7c0941fe3d022100bc38b1820ef4e03c065a0a57cb84a17e64d7b75de76f0939b36dac6498a4e7d2",
         "curve": "secp256k1",
-        "pub": "03343b99b580e00bf980dfde6e635464354fbe94e048ba8cde47f96c89aac2621d",
+        "pub": "03d83fc22558d3aae01de4335e5a40873f5df57b23669cdd1c754e6e246ab353b4",
         "type": "ec"
       }
     ],
-    "litecoin": [
+    "testnet": [
       {
-        "_sig": "3046022100fd9ded3fd9188fdeeb4f37948e5bdde22a0b0971e8d036285257d89d51c34846022100b8a3409452d6365c2fdbab22e9a80e6d5bae5e81470cc53e006a3e53849b81e7",
-        "curve": "secp256k1",
-        "pub": "02e188b5a0f1032c23d0a7c5214b16873e8c87efa5a8766c44d0f8e6094fd15605",
-        "type": "ec"
+        "_sig": "30440220042e4334758960847d350ef624bcde29b858c62e77ef7c9c88938000bfd9cb6c022031c7c6bcf10eab310e4440915d19c896bcae7917da53594ce92cc84a4ced3387",
+        "address": "mpcs5uhd1xDq5AZy3cP7Gn8FqzfQjH7ghf",
+        "networkName": "testnet",
+        "pub": "02125378686a3e5f82078d42f46360d4ef8c726f2a598cd3813e19a349686535ff",
+        "type": "bitcoin"
       }
     ]
   },

@@ -2,26 +2,28 @@
   "_keys": {
     "bitcoin": [
       {
-        "curve": "secp256k1",
-        "priv": "f074699f0891f2c6131620f71484580a8e92fb58506ec2c038df8081169c0d55",
-        "pub": "0355e75fa1f48b6660796a4767a27370719670357a7c0b11040e520cd4cafbfed2",
-        "type": "ec"
+        "address": "13XAyorHAR3H5PRN2caWZjtfooEBGCPzQm",
+        "networkName": "bitcoin",
+        "priv": "L17xNhSEUF7KmB9bVfChtioJsMqXnKL4wWbzQ37UJ99PNk2JSuGb",
+        "pub": "024990ba2951284c06e0a967e076a177b848f8e33e79825db2f56d2290708c21e3",
+        "type": "bitcoin"
       }
     ],
     "identity": [
       {
         "curve": "secp256k1",
-        "priv": "5ec23a119d98bb7ebaee9ad5aa96e1f6d151f826ccaf0151bdc181849224c10f",
-        "pub": "03343b99b580e00bf980dfde6e635464354fbe94e048ba8cde47f96c89aac2621d",
+        "priv": "d149750fb4ee30af6a039d3dd1bd2aeda818e64d95f33c983a733d9a5a8f03c4",
+        "pub": "03d83fc22558d3aae01de4335e5a40873f5df57b23669cdd1c754e6e246ab353b4",
         "type": "ec"
       }
     ],
-    "litecoin": [
+    "testnet": [
       {
-        "curve": "secp256k1",
-        "priv": "5fdd7c4079fda14adbdadee70c8802501144c9c033a11d54130142631dc7d8d7",
-        "pub": "02e188b5a0f1032c23d0a7c5214b16873e8c87efa5a8766c44d0f8e6094fd15605",
-        "type": "ec"
+        "address": "mpcs5uhd1xDq5AZy3cP7Gn8FqzfQjH7ghf",
+        "networkName": "testnet",
+        "priv": "cVyGon2EtMvHBge8GA8fwTYk4sUK3VEgSon3Pamb46zZk6x92nQA",
+        "pub": "02125378686a3e5f82078d42f46360d4ef8c726f2a598cd3813e19a349686535ff",
+        "type": "bitcoin"
       }
     ]
   },
