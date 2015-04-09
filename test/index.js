@@ -3,7 +3,7 @@ var Identity = require('../lib/identity');
 var test = require('tape');
 var tedPublic = require('./fixtures/ted-pub');
 var tedPrivate = require('./fixtures/ted-priv');
-var utils = require('../lib/utils');
+var stringify = require('tradle-utils').stringify;
 var Keys = require('../lib/keys');
 var toKey = Keys.toKey;
 var AddressBook = require('../lib/addressbook');
@@ -29,7 +29,7 @@ test('sign with various keys', function(t) {
 
   var btcPubKey = tedPublic._keys.bitcoin[0];
   var sig = tedWKeys.sign(msg, btcPubKey);
-  t.ok(utils.verify(msg, Keys.toKey(btcPubKey), sig));
+  t.ok(toKey(btcPubKey).verify(msg, sig));
 
   // t.equal(sig, '3045022022465a0ced56b9036a227849fc35a0e03964e18d2a68c3d3bda18039019c84a3022100a96132cce68e46a0a85c2910a5dcb4320b657eb48b6c3de3a50a80d51cc42a38');
   t.throws(function() {
@@ -81,8 +81,8 @@ function makeTeds() {
 
   var pub = dude.exportSigned();
   var priv = dude.toJSON(true);
-  console.log(utils.stringify(pub, null, 2));
-  console.log(utils.stringify(priv, null, 2));
+  console.log(stringify(pub, null, 2));
+  console.log(stringify(priv, null, 2));
 }
 
 // function firstProp(obj) {
