@@ -1,4 +1,5 @@
 {
+  "_type": "tradle.Identity",
   "contact": [
     {
       "identifier": "somebodyelse",
@@ -27,27 +28,27 @@
   ],
   "pubkeys": [
     {
-      "curve": "secp256k1",
-      "fingerprint": "81c816f0287a9ad828f3eb7fdc6b07be0a937fafa0278b2bd21fc3eb998c2a99",
-      "priv": "56adbca6bda2a7e094073582d1759125972883d6379144559fda847aabdd23c1",
+      "curve": "ed25519",
+      "fingerprint": "b00b63ceed3842b43b9409f346924624bab89d224546b42cfa5dde3cef98e4dc",
+      "priv": "0e3c2ecd203af7f7cc13e8843092da256bb0432e05a586c1eeaa140a9e3bfc46",
       "type": "ec",
-      "value": "0352d7433d7f715bfd4fca9321948530d6e919ad558c03fb792099d1ed5c9331b7"
+      "value": "02367e6f9a96f1d79da28c1c2683a2b27a2524ac0cfaa6df67c10feb40a3575f6c"
     },
     {
-      "fingerprint": "1799hHsLnsS7dVWBjuXKRBEMsZUGxNGRwQ",
-      "label": "blah",
+      "fingerprint": "1LNW8G26Z659taCSZUgt1hCVVBEzwdEb3w",
+      "label": "most triumphant key",
       "networkName": "bitcoin",
-      "priv": "L4ueeKpmT344hBgd19zhB3sY7fF2WV13FKTSgVEyWvBYF6VmK9sc",
+      "priv": "L5GYFXXTvrNbWLmTn3cWJ4zHe2xz1o3Dh7Rq5fsz3ehE24kyoKJa",
       "type": "bitcoin",
-      "value": "02763ed3f7855f9af690692c4fec8f863477c0180df259676e80bc95d85f15370d"
+      "value": "038bf6fa3210e2395abaa6530a8f1d981c74fa4ed4d4223ded5fd502c02baa8938"
     },
     {
-      "fingerprint": "mppRgQPcRj3HuxvA2984xHSwSsKtEYVmpv",
-      "label": "yo!",
+      "fingerprint": "modyHbZh9EGAhDoqi4CD47u22G3AQfttE4",
+      "label": "most excellent key",
       "networkName": "testnet",
-      "priv": "cT3cMLQVsvqA5FnzuysGNwrAJg9nbFeuguQtgoVmBLcym5cxL2dK",
+      "priv": "cT5LuTX2MRTGr8fDkVHB79UmLGQqeZzde4JTadoY16hXbLCu59T4",
       "type": "bitcoin",
-      "value": "02c9c19285316b4efa1150c5fa7672d418f537ff9fb0038dd22036092fb3ac5332"
+      "value": "0366e54d422f24d1f619632042c33829a83003aef882842c8b450c80d41ab154e1"
     }
   ],
   "summary": "Bill's best friend",

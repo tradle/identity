@@ -1,4 +1,5 @@
 {
+  "_type": "tradle.Identity",
   "contact": [
     {
       "identifier": "somebodyelse",
@@ -27,27 +28,27 @@
   ],
   "pubkeys": [
     {
-      "_sig": "30450221009f883b22b6ed690757394a575f05bacb36ee169dfd745e51fe0e48e68f83b53902203bd81d3c8274c2b38c4a91fe67df1671058ad3a604af26373fb2187509c024f3",
-      "curve": "secp256k1",
-      "fingerprint": "81c816f0287a9ad828f3eb7fdc6b07be0a937fafa0278b2bd21fc3eb998c2a99",
+      "_sig": "304402200f2258dfe19affb4af11e19283c78f18b76b73903b61b35de2846380e8a2e9f10220043a26436e8204d8be84e7b71d15cbf797e62c6d61029f9f774a9d1ca2fab0d0",
+      "curve": "ed25519",
+      "fingerprint": "b00b63ceed3842b43b9409f346924624bab89d224546b42cfa5dde3cef98e4dc",
       "type": "ec",
-      "value": "0352d7433d7f715bfd4fca9321948530d6e919ad558c03fb792099d1ed5c9331b7"
+      "value": "02367e6f9a96f1d79da28c1c2683a2b27a2524ac0cfaa6df67c10feb40a3575f6c"
     },
     {
-      "_sig": "3045022100abaf847a1a20e419916a68985f46faf5a1562f33a31d02ebe12968b988c31f4a022024d3065c2d10355097f3faf538bbc644025ba19cfba4eafcae8e99f9e372f823",
-      "fingerprint": "1799hHsLnsS7dVWBjuXKRBEMsZUGxNGRwQ",
-      "label": "blah",
+      "_sig": "3045022100c7f3de45b278789db259771c4acfe4fedc4e2fdae1929c4b61f31809e32cbc1802205d557cce99303b59a9c702584dad1d1f12a67ff1e0e8a6e824e86c2d44506487",
+      "fingerprint": "1LNW8G26Z659taCSZUgt1hCVVBEzwdEb3w",
+      "label": "most triumphant key",
       "networkName": "bitcoin",
       "type": "bitcoin",
-      "value": "02763ed3f7855f9af690692c4fec8f863477c0180df259676e80bc95d85f15370d"
+      "value": "038bf6fa3210e2395abaa6530a8f1d981c74fa4ed4d4223ded5fd502c02baa8938"
     },
     {
-      "_sig": "3045022100c96f15d1679f75a9fcdb14ae20bbc945761e1e64d71bc65bf4cdf3c5432be736022041f46db9deaec49fbef57c3a72734c8c66ff1e8892356dee90980e5bc811df0a",
-      "fingerprint": "mppRgQPcRj3HuxvA2984xHSwSsKtEYVmpv",
-      "label": "yo!",
+      "_sig": "3045022100d0bcbed57494db5579109f5b2b3fe9d5708ca9f217880da15e68b6506ce174dd0220367e240d41df11d2135094549e20878945052e1bff2b16b2900021aedaeb231e",
+      "fingerprint": "modyHbZh9EGAhDoqi4CD47u22G3AQfttE4",
+      "label": "most excellent key",
       "networkName": "testnet",
       "type": "bitcoin",
-      "value": "02c9c19285316b4efa1150c5fa7672d418f537ff9fb0038dd22036092fb3ac5332"
+      "value": "0366e54d422f24d1f619632042c33829a83003aef882842c8b450c80d41ab154e1"
     }
   ],
   "summary": "Bill's best friend",
