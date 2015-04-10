@@ -4,10 +4,12 @@ var Identity = require('../lib/identity');
 var test = require('tape');
 var tedPublic = require('./fixtures/ted-pub');
 var tedPrivate = require('./fixtures/ted-priv');
+var ryanPublic = require('./fixtures/ryan-pub');
 var tu = require('tradle-utils');
 var utils = require('../lib/utils');
 var stringify = tu.stringify;
 var prettify = tu.prettify;
+var Types = require('../lib/sectionTypes');
 var Keys = require('../lib/keys');
 var toKey = require('../lib/toKey');
 var AddressBook = require('../lib/addressbook');
@@ -16,15 +18,18 @@ var AddressBook = require('../lib/addressbook');
 // if (true) return;
 
 test('export/load identity', function(t) {
-  t.plan(3);
-
   var ted = Identity.fromJSON(tedPublic);
+  var photo = ted.photos()[0];
+  t.ok(photo instanceof Types.Photo);
+  t.equal(photo._props.type, 'headshot');
+
   var tedWKeys = Identity.fromJSON(tedPrivate);
   var signed = tedWKeys.exportSigned();
   // export a valid json
   t.ok(signed, 'export signed identity');
   t.ok(Identity.fromJSON(signed), 'validate exported identity');
   t.throws(ted.exportSigned.bind(ted), /missing private key/);
+  t.end();
 });
 
 test('sign with various keys', function(t) {
@@ -32,7 +37,7 @@ test('sign with various keys', function(t) {
   var ted = Identity.fromJSON(tedPublic);
   var tedWKeys = Identity.fromJSON(tedPrivate);
 
-  var btcPubKey = tedPublic.pubkeys.bitcoin[0];
+  var btcPubKey = utils.find(tedPublic.pubkeys, function(k) { return k.prop('type') === 'bitcoin' && k });
   var sig = tedWKeys.sign(msg, btcPubKey);
   t.ok(toKey(btcPubKey).verify(msg, sig));
 
@@ -48,7 +53,7 @@ test('sign with various keys', function(t) {
     }));
   }, /key not found/);
 
-  ted.forEachKey(function(key) {
+  ted.keys().forEach(function(key) {
     t.isNot(tedWKeys.getPrivateKey(key), null, 'has private key');
   });
 
@@ -65,11 +70,11 @@ test('address book', function(t) {
     teds.add(futureTed);
   }, /identity with this/);
 
-  ted.forEachKey(function(key) {
+  ted.keys().forEach(function(key) {
     t.isNot(teds.byPub(key), null, 'found contact by pubkey');
   });
 
-  ted.forEachKey(function(key) {
+  ted.keys().forEach(function(key) {
     t.isNot(teds.byFingerprint(key), null, 'found contact by key fingerprint');
   });
 
@@ -77,19 +82,52 @@ test('address book', function(t) {
   t.end();
 });
 
+test('openname compliant', function(t) {
+  var ryan = Identity.fromJSON(ryanPublic);
+  t.ok(ryan);
+  t.end();
+});
+
 function makeTeds() {
-  var dude = new Identity({
-    firstName: 'Ted',
-    middleName: 'Theodore',
-    lastName: 'Logan'
-  });
+  var ted = new Identity()
+    .name({
+      firstName: 'Ted',
+      middleName: 'Theodore',
+      lastName: 'Logan',
+      formatted: 'Ted Theodore Logan'
+    })
+    .location({
+      country: 'USA',
+      region: 'California',
+      city: 'San Dimas',
+      street: '666 Wyld Stallyns Dr',
+      postalCode: 666,
+      formatted: '666 Wyld Stallyns Dr, San Dimas, California'
+    })
+    .summary('Bill\'s best friend')
+    .addPhoto(new Types.Photo({
+      type: 'headshot',
+      url: 'http://scrapetv.com/News/News%20Pages/Entertainment/images-9/keanu-reeves-bill-and-ted.jpg'
+    }))
+    .addWebsite(new Types.Website({
+      url: 'wyldstallyns.com'
+    }))
+    .addContact(new Types.Contact({
+      type: 'skype',
+      identifier: 'somebodyelse'
+    }))
+    .addKey(Keys.EC.gen())
+    .addKey(Keys.Bitcoin.gen({
+      networkName: 'bitcoin',
+      label: 'blah'
+    }))
+    .addKey(Keys.Bitcoin.gen({
+      networkName: 'testnet',
+      label: 'yo!'
+    }));
 
-  dude.addKey('identity', Keys.EC.gen());
-  dude.addKey('bitcoin', Keys.Bitcoin.gen('bitcoin'));
-  dude.addKey('testnet', Keys.Bitcoin.gen('testnet'));
-
-  var pub = dude.exportSigned();
-  var priv = dude.toJSON(true);
+  var pub = ted.exportSigned();
+  var priv = ted.toJSON(true);
   fs.writeFile('./test/fixtures/ted-pub.json', prettify(pub));
   fs.writeFile('./test/fixtures/ted-priv.json', prettify(priv));
 }

@@ -1,38 +1,60 @@
 {
-  "firstName": "Ted",
-  "lastName": "Logan",
-  "middleName": "Theodore",
-  "pubkeys": {
-    "bitcoin": [
-      {
-        "fingerprint": "16YkwcRzrbcJNZHXA67X1n7FBafmBkyUEH",
-        "networkName": "bitcoin",
-        "priv": "L3ehQcYxZREByGJBqeZBpd52WLpcrjUy2AGiJbiY8DHiqLyiPKzz",
-        "pub": "03a38a2a8d6941bcc2cb2fbecd90706f53237b2672eacec3d9a62856e8f6b85d8f",
-        "type": "bitcoin",
-        "value": "03a38a2a8d6941bcc2cb2fbecd90706f53237b2672eacec3d9a62856e8f6b85d8f"
-      }
-    ],
-    "identity": [
-      {
-        "curve": "secp256k1",
-        "fingerprint": "804787ae1422728816bd4d4ae06097eff5eaa7060ca99f7a262b573c4f68fa12",
-        "priv": "b4dfed0fbb5ca997d2fff0522b6986bef1d05b87cc4249037deac894e5bfb578",
-        "pub": "035988aae1879f01ce37b043ae7b355dc71644053a28828605c1301e611e612798",
-        "type": "ec",
-        "value": "035988aae1879f01ce37b043ae7b355dc71644053a28828605c1301e611e612798"
-      }
-    ],
-    "testnet": [
-      {
-        "fingerprint": "mjVbFFdMUhZ628VdqqgKZwztE8Uw12n7Ze",
-        "networkName": "testnet",
-        "priv": "cNriQQJxxj69wb77nwDHWRWLSB7GC7PquuhxgZUeDXvH9tBVCvXy",
-        "pub": "03c2e7b7f0e3f8cf7d29905605e25fb4cd5b21af502c8d0d837a13dc86e5559725",
-        "type": "bitcoin",
-        "value": "03c2e7b7f0e3f8cf7d29905605e25fb4cd5b21af502c8d0d837a13dc86e5559725"
-      }
-    ]
+  "contact": [
+    {
+      "identifier": "somebodyelse",
+      "type": "skype"
+    }
+  ],
+  "location": {
+    "city": "San Dimas",
+    "country": "USA",
+    "formatted": "666 Wyld Stallyns Dr, San Dimas, California",
+    "postalCode": 666,
+    "region": "California",
+    "street": "666 Wyld Stallyns Dr"
   },
-  "v": "0.3"
+  "name": {
+    "firstName": "Ted",
+    "formatted": "Ted Theodore Logan",
+    "lastName": "Logan",
+    "middleName": "Theodore"
+  },
+  "photos": [
+    {
+      "type": "headshot",
+      "url": "http://scrapetv.com/News/News%20Pages/Entertainment/images-9/keanu-reeves-bill-and-ted.jpg"
+    }
+  ],
+  "pubkeys": [
+    {
+      "curve": "secp256k1",
+      "fingerprint": "81c816f0287a9ad828f3eb7fdc6b07be0a937fafa0278b2bd21fc3eb998c2a99",
+      "priv": "56adbca6bda2a7e094073582d1759125972883d6379144559fda847aabdd23c1",
+      "type": "ec",
+      "value": "0352d7433d7f715bfd4fca9321948530d6e919ad558c03fb792099d1ed5c9331b7"
+    },
+    {
+      "fingerprint": "1799hHsLnsS7dVWBjuXKRBEMsZUGxNGRwQ",
+      "label": "blah",
+      "networkName": "bitcoin",
+      "priv": "L4ueeKpmT344hBgd19zhB3sY7fF2WV13FKTSgVEyWvBYF6VmK9sc",
+      "type": "bitcoin",
+      "value": "02763ed3f7855f9af690692c4fec8f863477c0180df259676e80bc95d85f15370d"
+    },
+    {
+      "fingerprint": "mppRgQPcRj3HuxvA2984xHSwSsKtEYVmpv",
+      "label": "yo!",
+      "networkName": "testnet",
+      "priv": "cT3cMLQVsvqA5FnzuysGNwrAJg9nbFeuguQtgoVmBLcym5cxL2dK",
+      "type": "bitcoin",
+      "value": "02c9c19285316b4efa1150c5fa7672d418f537ff9fb0038dd22036092fb3ac5332"
+    }
+  ],
+  "summary": "Bill's best friend",
+  "v": "0.3",
+  "websites": [
+    {
+      "url": "wyldstallyns.com"
+    }
+  ]
 }
