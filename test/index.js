@@ -82,6 +82,19 @@ test('address book', function(t) {
   t.end();
 });
 
+test('revocation', function(t) {
+  var key = Keys.Bitcoin.gen();
+  var cert = key.generateRevocation(Keys.Base.REVOCATION_REASONS.keyCompromise);
+  var valid = key.validateRevocation(cert);
+  t.equal(valid.result, true);
+  
+  t.throws(function() {
+    key.generateRevocation(11);
+  }, /Invalid revocation reason/);
+  
+  t.end();
+});
+
 test('openname compliant', function(t) {
   var ryan = Identity.fromJSON(ryanPublic);
   t.ok(ryan);
@@ -119,11 +132,11 @@ function makeTeds() {
     .addKey(Keys.EC.gen())
     .addKey(Keys.Bitcoin.gen({
       networkName: 'bitcoin',
-      label: 'blah'
+      label: 'most triumphant key'
     }))
     .addKey(Keys.Bitcoin.gen({
       networkName: 'testnet',
-      label: 'yo!'
+      label: 'most excellent key'
     }));
 
   var pub = ted.exportSigned();
