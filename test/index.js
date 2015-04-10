@@ -105,17 +105,17 @@ function makeTeds() {
       formatted: '666 Wyld Stallyns Dr, San Dimas, California'
     })
     .summary('Bill\'s best friend')
-    .addPhoto(new Types.Photo({
+    .addPhoto({
       type: 'headshot',
       url: 'http://scrapetv.com/News/News%20Pages/Entertainment/images-9/keanu-reeves-bill-and-ted.jpg'
-    }))
-    .addWebsite(new Types.Website({
+    })
+    .addWebsite({
       url: 'wyldstallyns.com'
-    }))
-    .addContact(new Types.Contact({
+    })
+    .addContact({
       type: 'skype',
       identifier: 'somebodyelse'
-    }))
+    })
     .addKey(Keys.EC.gen())
     .addKey(Keys.Bitcoin.gen({
       networkName: 'bitcoin',
