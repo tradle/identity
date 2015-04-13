@@ -16,7 +16,7 @@
     "hashmap": "^2.0.1",
     "json-stable-stringify": "^1.0.0",
     "object.omit": "^0.2.1",
-    "tradle-utils": "^0.1.0",
+    "tradle-utils": "^0.1.1",
     "typeforce": "^1.0.0"
   },
   "devDependencies": {
