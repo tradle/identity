@@ -7,8 +7,8 @@ lightweight identity with an arbitrary property set and an arbitrary collection 
 ```js
 var midentity = require('midentity');
 var Identity = midentity.Identity;
+var AddressBook = midentity.AddressBook
 var Keys = midentity.Keys;
-var goodies = midentity.Sections;
 var ted = new Identity()
   .name({
     firstName: 'Ted',
@@ -25,17 +25,17 @@ var ted = new Identity()
     formatted: '666 Wyld Stallyns Dr, San Dimas, California'
   })
   .summary('Bill\'s best friend')
-  .addPhoto(new types.Photo({
+  .addPhoto({
     type: 'headshot',
     url: 'http://scrapetv.com/News/News%20Pages/Entertainment/images-9/keanu-reeves-bill-and-ted.jpg'
-  }))
-  .addWebsite(new types.Website({
+  })
+  .addWebsite({
     url: 'wyldstallyns.com'
-  }))
-  .addContact(new types.Contact({
+  })
+  .addContact({
     type: 'skype',
     identifier: 'somebodyelse'
-  }))
+  })
   .addKey(Keys.EC.gen())
   .addKey(Keys.Bitcoin.gen({
     networkName: 'bitcoin',
@@ -45,7 +45,14 @@ var ted = new Identity()
     networkName: 'testnet',
     label: 'most triumphant key'
   }));
-
+  
+var addressBook = new AddressBook();
+addressBook.addIndex({ name: 'label', unique: true });
+addressBook.addIndex({ name: 'networkName', unique: false });
+addressBook.add(ted);
+var keyMatch = addressBook.byKey(ted.keys()[0]);
+var labelMatch = addressBook.byLabel('most triumphant key');
+var networkMatch = addressBook.byNetwork('testnet');
 ```
 
 ### exportSigned
