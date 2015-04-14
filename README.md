@@ -36,12 +36,16 @@ var ted = new Identity()
     type: 'skype',
     identifier: 'somebodyelse'
   })
-  .addKey(Keys.EC.gen())
+  .addKey(Keys.EC.gen({
+    purpose: 'sign'
+  }))
   .addKey(Keys.Bitcoin.gen({
+    purpose: 'data',
     networkName: 'bitcoin',
     label: 'most excellent key'
   }))
   .addKey(Keys.Bitcoin.gen({
+    purpose: 'payment',
     networkName: 'testnet',
     label: 'most triumphant key'
   }));

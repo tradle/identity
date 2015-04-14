@@ -78,6 +78,13 @@ test('address book', function(t) {
     t.isNot(teds.byFingerprint(key), null, 'found contact by key fingerprint');
   });
 
+  teds.addIndex({ name: 'label', unique: true });
+  teds.addIndex({ name: 'networkName', unique: false });
+  var labelMatch = teds.byLabel('most triumphant key');
+  var networkMatch = teds.byNetworkName('testnet');
+  t.isNot(labelMatch, null, 'found contact by label')
+  t.isNot(networkMatch, null, 'found contact by networkName')
+
   t.ok(teds.remove(ted));
   t.end();
 });
@@ -87,11 +94,15 @@ test('revocation', function(t) {
   var cert = key.generateRevocation(Keys.Base.REVOCATION_REASONS.keyCompromise);
   var valid = key.validateRevocation(cert);
   t.equal(valid.result, true);
-  
+
   t.throws(function() {
     key.generateRevocation(11);
   }, /Invalid revocation reason/);
-  
+
+  key.addRevocation(1)
+  key.addRevocation(2)
+  t.equal(key.toJSON().revocations.length, 2);
+
   t.end();
 });
 
@@ -129,14 +140,27 @@ function makeTeds() {
       type: 'skype',
       identifier: 'somebodyelse'
     })
-    .addKey(Keys.EC.gen())
+    .addKey(Keys.EC.gen({
+      purpose: 'update'
+    }))
+    .addKey(Keys.EC.gen({
+      purpose: 'sign'
+    }))
+    .addKey(Keys.EC.gen({
+      purpose: 'sign'
+    }))
+    .addKey(Keys.EC.gen({
+      purpose: 'encrypt'
+    }))
     .addKey(Keys.Bitcoin.gen({
       networkName: 'bitcoin',
-      label: 'most triumphant key'
+      label: 'most triumphant key',
+      purpose: 'payment'
     }))
     .addKey(Keys.Bitcoin.gen({
       networkName: 'testnet',
-      label: 'most excellent key'
+      label: 'most excellent key',
+      purpose: 'payment'
     }));
 
   var pub = ted.exportSigned();
