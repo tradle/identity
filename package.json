@@ -8,14 +8,19 @@
   },
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "MIT",
+  "browser": {
+    "crypto": "crypto-browserify"
+  },
   "dependencies": {
     "bitcoinjs-lib": "^1.5.6",
+    "crypto-browserify": "^3.9.14",
     "deep-equal": "^1.0.0",
     "elliptic": "^3.0.3",
     "extend": "^2.0.0",
     "hashmap": "^2.0.1",
     "json-stable-stringify": "^1.0.0",
     "object.omit": "^0.2.1",
+    "otr": "^0.2.14",
     "tradle-utils": "^0.1.1",
     "typeforce": "^1.0.0"
   },

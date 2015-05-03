@@ -14,8 +14,8 @@ var Keys = require('../lib/keys');
 var toKey = require('../lib/toKey');
 var AddressBook = require('../lib/addressbook');
 
-// makeTeds();
-// if (true) return;
+makeTeds();
+if (true) return;
 
 test('export/load identity', function(t) {
   var ted = Identity.fromJSON(tedPublic);
@@ -37,9 +37,17 @@ test('sign with various keys', function(t) {
   var ted = Identity.fromJSON(tedPublic);
   var tedWKeys = Identity.fromJSON(tedPrivate);
 
-  var btcPubKey = utils.find(tedPublic.pubkeys, function(k) { return k.prop('type') === 'bitcoin' && k });
-  var sig = tedWKeys.sign(msg, btcPubKey);
-  t.ok(toKey(btcPubKey).verify(msg, sig));
+  tedWKeys.signingKeys().forEach(function(key) {
+    var sig = key.sign(msg)
+    var pub = ted.keys({ pub: key.pubKeyString() })[0]
+    t.ok(pub.verify(msg, sig))
+  })
+  // var btcPubKey = utils.find(tedPublic.pubkeys, function(k) {
+  //   return k.type === 'bitcoin' && k
+  // });
+
+  // var sig = tedWKeys.sign(msg, btcPubKey.value);
+  // t.ok(toKey(btcPubKey).verify(msg, sig));
 
   // t.equal(sig, '3045022022465a0ced56b9036a227849fc35a0e03964e18d2a68c3d3bda18039019c84a3022100a96132cce68e46a0a85c2910a5dcb4320b657eb48b6c3de3a50a80d51cc42a38');
   t.throws(function() {
@@ -146,7 +154,7 @@ function makeTeds() {
     .addKey(Keys.EC.gen({
       purpose: 'sign'
     }))
-    .addKey(Keys.EC.gen({
+    .addKey(Keys.DSA.gen({
       purpose: 'sign'
     }))
     .addKey(Keys.EC.gen({
