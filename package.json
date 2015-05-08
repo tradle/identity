@@ -8,12 +8,8 @@
   },
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "MIT",
-  "browser": {
-    "crypto": "crypto-browserify"
-  },
   "dependencies": {
     "bitcoinjs-lib": "^1.5.6",
-    "crypto-browserify": "^3.9.14",
     "deep-equal": "^1.0.0",
     "elliptic": "^3.0.3",
     "extend": "^2.0.0",
