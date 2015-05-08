@@ -14,8 +14,8 @@ var Keys = require('../lib/keys');
 var toKey = require('../lib/toKey');
 var AddressBook = require('../lib/addressbook');
 
-makeTeds();
-if (true) return;
+// makeTeds();
+// if (true) return;
 
 test('export/load identity', function(t) {
   var ted = Identity.fromJSON(tedPublic);

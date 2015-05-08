@@ -20,7 +20,7 @@
     "hashmap": "^2.0.1",
     "json-stable-stringify": "^1.0.0",
     "object.omit": "^0.2.1",
-    "otr": "^0.2.14",
+    "otr": "git://github.com/mvayngrib/otr#browserify",
     "tradle-utils": "^0.1.1",
     "typeforce": "^1.0.0"
   },

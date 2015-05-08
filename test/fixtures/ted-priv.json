@@ -29,52 +29,52 @@
   "pubkeys": [
     {
       "curve": "ed25519",
-      "fingerprint": "c8a1215c7afdd3d053f78b3eb0a2a622e8849c6f75de0bec09f51e1d6f1aa824",
-      "priv": "0dd93ac93edaeaa27f72d57a4f7b4f354700f16968e84e0a1816a2897dff73da",
+      "fingerprint": "66a887164f427b01af062574444f54893b27f3f91f139a180045b9c4a7b62c3e",
+      "priv": "0b29788ad3674837f41e4e079750cc4356565abe19d7472f7591c6fa4bee00fb",
       "purpose": "update",
       "type": "ec",
-      "value": "0261e49446dcaa19b55ee315ccf9c457fcd96e3d509e1fd7673039905d8cc3bc1d"
+      "value": "023d047a389a949f3c1aad38fc5f9da84554e9c54a68761026c115b8a06cf430e2"
     },
     {
       "curve": "ed25519",
-      "fingerprint": "496c0be9532cda12a77680b74fd924035dbb3d22f0303424fa6b69b3772cc3d3",
-      "priv": "0b56212cabcc31bc56ec50311af9241f338b03a536bbd269970a5f8e89cc0c86",
+      "fingerprint": "703802b8e2e7f09450826be74e070f8f87d55d69cd46519e0f1e27375a0db3f2",
+      "priv": "0f043125fb038a9d59af659b46c54a3636e9a7cf215d682a6a5da95e21b96a9d",
       "purpose": "sign",
       "type": "ec",
-      "value": "030efa089cd14b419c124630278a33804a21cea232f68340fdd72c834833345be9"
+      "value": "022a65caee6af4e0c9b2adeb17b52e58e9480bc5d4fca09a67c8b80379bbd67763"
     },
     {
-      "fingerprint": "1fa3dd5350cf23077c4c8bbf763448f206f5a61c",
-      "priv": "AAAAAACA3+ri3dO0FzQI6N93FMETdWZwOUoomewPlZuQlFv9qg2zcPi+zU5ks1HhVS8XSKkZAnCZAP6p/ikfXTdILFSLu/c7be5Q+Ck4j3ZA1Ob2u+7ShUBEkOUjsNsAlS55WIVzF9uA3wUKV0rRDefJpoLAqWJUYibkr3jmNF+/Vv5GxAcAAAAU/Z0XrENeo3fny1MpZJQvcLLFNrUAAACAZRSKVIiPsZHOxErNJnk9U5Z2OQFw7fbNzr0fW5TBKAIxX39Odd1l99Lxjm/2TAa1N3gUhHBK/4gnV49un+04diyRQUPqUe0Hn8nm76FiW0ZU+3m1ntX4fvF0RK7zvDS+mzHtdoZOOC0MZj2Nq3Wh7i7mbCNLYyMFGcjTO4/bPU4AAACAko3oyYoSPnJIFv1n/4HcdthypbNJNa2BPYsLtiFnSn9Qu3dGntHxHaCWWNTpuUCRjnyte0XAGlHq9yuG2vOZ74vbL92qxXU+WwNF0zvNmjmJKRx+xOhdPWdErkKX6MRP1eBB8gT15xlAeIWWqVJKdK6amS8jbuuTgXn+AgnhOH8AAAAU2oq1Hb5e6f3ACJny/qgRNHtD0gs=",
+      "fingerprint": "cc1bd605098ebccdabd30972ef871341086f455f",
+      "priv": "AAAAAACA20o4ejsktowdIce0o4Vmq8430E5twDSb+wVxXOQXoEMJ+QdeNP8Hx3Y8tjnTMz63yJ0JPbi6+fuTs1Lm6sd+ZL7PJbMv9k0xr/BjmCVx48L/rNkhr6lx1Ap+BBwMthKIN3IB9o5GPlSqAtanNeQOstPa2CPEHSpy/31DeKGCXB0AAAAUru7p37evSh3POJa6C0X06UOo6AcAAACABqb6mD14Zd7U7jma5cRW2TExUeYsAI0ZduySpYX5p2jsmGcKQmcliyBvrCDOW/8xYnnit17YKpePZL2byQIamqtCX61cZOm6suZht3w8TY7sofQrzcVywmn2YR+QP42HUIYMSWoVDcJD/IX+QS0rFd1jBk8nzM3Pocpuv+L93jUAAACAdadr2whtJ3Obn8HIJN5gPAU/3q6gdYWFMEZiL5Ziw5DVl/WcAVB2/PW31XL136zEJyEZm1Q4QcvL6jqlaQjqE4krXPmtTriw2bhWFzOn4HiYeVBb1zKlSc2sMW1+/MBddbginwPXbvrv7o3m6+r7AbiQ3N7Uy7Re/wLT5En05QsAAAAUMrJlnHldatMMuxZCgxUzJYihom0=",
       "purpose": "sign",
       "type": "dsa",
-      "value": "\u0000\u0000\u0000\u0000\u0000ßêâÝÓ´\u00174\bèßw\u0014Á\u0013ufp9J(ì\u000f[ýª\r³pø¾ÍNd³QáU/\u0017H©\u0019\u0002p\u0000þ©þ)\u001f]7H,T»÷;mîPø)8v@Ôæö»îÒ@Då#°Û\u0000.yXs\u0017Ûß\u0005\nWJÑ\rçÉ¦À©bTb&ä¯xæ4_¿VþFÄ\u0007\u0000\u0000\u0000\u0014ý\u0017¬C^£wçËS)d/p²Å6µ\u0000\u0000\u0000e\u0014T±ÎÄJÍ&y=Sv9\u0001píöÍÎ½\u001f[Á(\u00021_NuÝe÷ÒñoöL\u0006µ7x\u0014pJÿ'Wní8v,ACêQí\u0007Éæï¡b[FTûyµÕø~ñtD®ó¼4¾1ívN8-\ff=«u¡î.æl#Kc#\u0005\u0019ÈÓ;Û=N\u0000\u0000\u0000èÉ\u0012>rH\u0016ýgÿÜvØr¥³I5­=\u000b¶!gJP»wFÑñ\u001d XÔé¹@|­{EÀ\u001aQê÷+ÚóïÛ/ÝªÅu>[\u0003EÓ;Í9)\u001c~Äè]=gD®BèÄOÕàAò\u0004õç\u0019@x©RJt®/#nëyþ\u0002\tá8"
+      "value": "\u0000\u0000\u0000\u0000\u0000ÛJ8z;$¶\u001d!Ç´£f«Î7ÐNmÀ4û\u0005q\\ä\u0017 C\tù\u0007^4ÿ\u0007Çv<¶9Ó3>·È\t=¸ºùû³RæêÇ~d¾Ï%³/öM1¯ðc%qãÂÿ¬Ù!¯©qÔ\n~\u0004\u001c\f¶\u00127r\u0001öF>Tª\u0002Ö§5ä\u000e²ÓÚØ#Ä\u001d*rÿ}Cx¡\\\u001d\u0000\u0000\u0000\u0014®îéß·¯J\u001dÏ8º\u000bEôéC¨è\u0007\u0000\u0000\u0000\u0006¦ú=xeÞÔî9åÄVÙ11Qæ,\u0000\u0019vì¥ù§hìg\nBg% o¬ Î[ÿ1byâ·^Ø*d½É\u0002\u001a«B_­\\déº²æa·|<Mì¡ô+ÍÅrÂiöa\u001f?P\fIj\u0015\rÂCüþA-+\u0015Ýc\u0006O'ÌÍÏ¡Ên¿âýÞ5\u0000\u0000\u0000u§kÛ\bm'sÁÈ$Þ`<\u0005?Þ® u0Fb/bÃÕõ\u0001Pvüõ·Õrõß¬Ä'!\u0019T8AËËê:¥i\bê\u0013+\\ù­N¸°Ù¸V\u00173§àxyP[×2¥IÍ¬1m~üÀ]u¸\"\u0003×núïîæëêû\u0001¸ÜÞÔË´^ÿ\u0002ÓäIôå\u000b"
     },
     {
       "curve": "ed25519",
-      "fingerprint": "a4126794516893fcf9dffe5e20d7a594c49a13c567ad6ed60468e6f17643a739",
-      "priv": "080f501c41742f7294731948c3d9705c6ecf28cca760ce0405d6811ae395e130",
+      "fingerprint": "0a583f9f2556c3c05cc383828413bac669f01c484ded8c517b437018f99b643c",
+      "priv": "d804f3917750fba0fc6f5bd48101e745e42f5dee56816948121a37c9c693ae",
       "purpose": "encrypt",
       "type": "ec",
-      "value": "024cd3a9a535da18f467ea9212b3938c037d8974b9d608a0efd0c556fc8436d4f0"
+      "value": "036b27db9a8a3d03105a62a375e55f612225ebb66a467c2c16a9159c9e0dc4d831"
     },
     {
-      "fingerprint": "14QeNqBKGa8T8zjhB4Ldz3n74JUr7zkQid",
+      "fingerprint": "1PNzD2i7uHj86qEagKFbLuEp8AnFXVtJqQ",
       "label": "most triumphant key",
       "networkName": "bitcoin",
-      "priv": "KyUKc7oAcsyDzLpsoSzxRtErFV7u5CiCVGr3isve3JCvJJSUeUBT",
+      "priv": "L3oiboJbVJmMg45suknfmGq7JMCEtkYNm9zMPH9skb4Dym2z3VkT",
       "purpose": "payment",
       "type": "bitcoin",
-      "value": "03d420282382aa1d20b764160db195ba138178da3a7c36082b5015cd50f77601d6"
+      "value": "02b58b0d0c5cc2ce1d9347fa36ddd06f2c2f104b9938d182e4f69d1b5c8f305953"
     },
     {
-      "fingerprint": "n3yJhS2kRTdJiUGfvohjcXaDBWsFTED7Y9",
+      "fingerprint": "mhg6yaJ2Zp8wz2hcGLMBt8n5r3XagfiQsF",
       "label": "most excellent key",
       "networkName": "testnet",
-      "priv": "cPaxCuLT5WHgkMN5ykeQvNNvW5Hx8dPeDapcPTF3oYjDLfFifw8w",
+      "priv": "cTm8LG5WkxHRscFZn9sMZycdiYALgHQhaNzN2apxX1qeiJJxErxG",
       "purpose": "payment",
       "type": "bitcoin",
-      "value": "038e217bab840e84141bb3a81cca57f64a5e08fec55a96eebfcd2c6efe0bb66db0"
+      "value": "03bd1fecbb80aa4747db2b8cce0bf39d14627a996f653c81e9255c0d75a5a9f389"
     }
   ],
   "summary": "Bill's best friend",
