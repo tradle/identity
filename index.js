@@ -4,5 +4,4 @@ module.exports = {
   AddressBook: require('./lib/addressbook'),
   Keys: require('./lib/keys'),
   toKey: require('./lib/toKey')
-};
-
+}
