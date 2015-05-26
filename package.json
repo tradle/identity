@@ -24,6 +24,7 @@
     "typeforce": "^1.0.0"
   },
   "devDependencies": {
+    "pre-commit": "^1.0.7",
     "standard": "^3.11.1",
     "tape": "^3.5.0"
   }
