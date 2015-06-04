@@ -28,53 +28,53 @@
   ],
   "pubkeys": [
     {
-      "_sig": "304402200efbb4256946b443232d72ab488afcd04b02c1bb509a451633d19398cac967da022000dccbffa252b7e851bb4050ee4921b5f7c7a7c297d6a481695ef7b6652776bb",
+      "_sig": "304402200143fc05aaa33ca90411a139270667033d4d3c7f6b621f23876cb5ca4d3eede50220044f83f4d52cbadf26bb9eeefa71934752911c023293b3baee679a3f189d74da",
       "curve": "ed25519",
-      "fingerprint": "66a887164f427b01af062574444f54893b27f3f91f139a180045b9c4a7b62c3e",
+      "fingerprint": "ab08e33d2921740c3ca7acf2da04e6818692f568389a8e1e6341676761a47b01",
       "purpose": "update",
       "type": "ec",
-      "value": "023d047a389a949f3c1aad38fc5f9da84554e9c54a68761026c115b8a06cf430e2"
+      "value": "023b5e329146126b12b4af089d6b47bd517cedb0f806ac6d266be4c0a7327bcc2a"
     },
     {
-      "_sig": "3044022008b28352ea0363f5f664a8b5e3368b82b6efce30c15fc825ea5b2f4d805a795c02200c0896b41cdbd2b5c69eeedf8799b2004df55bbaa3c2b1678dabaf6d3f38d77a",
+      "_sig": "304402200d02f5125f98dd0665042beb224b14e74a517afd9b770185555953056ccdf05302200ff4c90440ffa18130512cd4439fd20df24245794d730eef1c9fa819b91e9d92",
       "curve": "ed25519",
-      "fingerprint": "703802b8e2e7f09450826be74e070f8f87d55d69cd46519e0f1e27375a0db3f2",
+      "fingerprint": "18fe93eec108fd81c9873770a14c650e4a37ae352d7f95a0468123f42a8317f5",
       "purpose": "sign",
       "type": "ec",
-      "value": "022a65caee6af4e0c9b2adeb17b52e58e9480bc5d4fca09a67c8b80379bbd67763"
+      "value": "0310044e9fc6a3c01adef50176c842782821c0b560d3be98b4afd077b1e2591e11"
     },
     {
-      "_sig": "Txá¯ï21òH*åVF\u0000\u000fâF´£°¶Ð¨uÇ¨.^'¨H©\u0005¨\u0005\u001b",
-      "fingerprint": "cc1bd605098ebccdabd30972ef871341086f455f",
+      "_sig": "IURzrqWtxQV6RWgzT4cJc0onaiFBDclcg6dA+MNSnaSzrF3bf8vJmg==",
+      "fingerprint": "7b4e311318f0f66d7b7927409501bad934dafaa6",
       "purpose": "sign",
       "type": "dsa",
-      "value": "\u0000\u0000\u0000\u0000\u0000ÛJ8z;$¶\u001d!Ç´£f«Î7ÐNmÀ4û\u0005q\\ä\u0017 C\tù\u0007^4ÿ\u0007Çv<¶9Ó3>·È\t=¸ºùû³RæêÇ~d¾Ï%³/öM1¯ðc%qãÂÿ¬Ù!¯©qÔ\n~\u0004\u001c\f¶\u00127r\u0001öF>Tª\u0002Ö§5ä\u000e²ÓÚØ#Ä\u001d*rÿ}Cx¡\\\u001d\u0000\u0000\u0000\u0014®îéß·¯J\u001dÏ8º\u000bEôéC¨è\u0007\u0000\u0000\u0000\u0006¦ú=xeÞÔî9åÄVÙ11Qæ,\u0000\u0019vì¥ù§hìg\nBg% o¬ Î[ÿ1byâ·^Ø*d½É\u0002\u001a«B_­\\déº²æa·|<Mì¡ô+ÍÅrÂiöa\u001f?P\fIj\u0015\rÂCüþA-+\u0015Ýc\u0006O'ÌÍÏ¡Ên¿âýÞ5\u0000\u0000\u0000u§kÛ\bm'sÁÈ$Þ`<\u0005?Þ® u0Fb/bÃÕõ\u0001Pvüõ·Õrõß¬Ä'!\u0019T8AËËê:¥i\bê\u0013+\\ù­N¸°Ù¸V\u00173§àxyP[×2¥IÍ¬1m~üÀ]u¸\"\u0003×núïîæëêû\u0001¸ÜÞÔË´^ÿ\u0002ÓäIôå\u000b"
+      "value": "AAAAAACA+JvwLLKG6yXYO+4JaVFe6RGGXBg2GxODKVbFClkwVJtsZNvFsZLZCtEGLjrFSqW2Lq1Dz3E4jSqu+d0bwVvsW/l6NNm6Kf0EpWpQli4gFQeYNuw32qMwqVjWSm0GNYtIQatC1+SP0AtMCP3rZYct1z64wxRMKz5NgZimtWK1g20AAAAUlZ0ALefhE8BF7e9HbmtFx8BLzVEAAACAiHAMNBmy7yNmC0zuKWrmGAv21O5srTRTS8B+xzratDkOyWGvtYUBg/NQQODLnzAx1sA4Csr7yKriMmp4+Q0xA5WDsZaF/o8NIjcUa59oJjQsxtiSBi3oa+FofH/o1h3IvhAF8jNKmeTAhkmV28DFywAYcXMwNdaL2J6AK/Xzn8UAAACACluUumYaf9JigiyFPtW/6zmwI7cW3qBIm0O+lhxKYCGsa+/9Wu4x0Hu9psD1JlG7JTh2x31bPIiZivZ+oDDyTb2i7GnjzbQvUm4W0r+55BNUx6jF+MwGPtEFkIJS10yl5EqTSBPRDg9oAUY4tWvWoAR1QHUhcq8GDqjtXcjLPFE="
     },
     {
-      "_sig": "3044022001dab7b9a4eea4c5665fe0270b5fd9ad2740b7e0245ec35fc5c774271e20ed7402200b29a126fc4990055a88574a1c3186ce3785c72f5b943041fb67adb3dc905f2c",
+      "_sig": "304402200afce02614567b36ba8881684ff8b4fe7537d777d2c95bb9acafb8d38635154702200e41230651777861175e51aeddd36d1c80f9291256c94104baf8286f0b1d5d40",
       "curve": "ed25519",
-      "fingerprint": "0a583f9f2556c3c05cc383828413bac669f01c484ded8c517b437018f99b643c",
+      "fingerprint": "1595aa69f39c17757390f62b583ed09c1e55f31368a600296f9281a136879c52",
       "purpose": "encrypt",
       "type": "ec",
-      "value": "036b27db9a8a3d03105a62a375e55f612225ebb66a467c2c16a9159c9e0dc4d831"
+      "value": "026aacc2d8834352a3aa8008fbd6e54eb4ce272a270efb08d0a2c2edb4612e3739"
     },
     {
-      "_sig": "30440220221cd1a48022ab757efedb1b66a8427c181152d1129d27911b80233e093b858402206848c53afd055fb1148be24f87338522be08ca9cc80a14b47937581277600874",
-      "fingerprint": "1PNzD2i7uHj86qEagKFbLuEp8AnFXVtJqQ",
+      "_sig": "3045022100d94aface900da8cb0f4596f85805ba0fb5b32b2b3c056a7f3bd2dd7436f843360220318957b577e68ea27e53a19181b72a8df019164a40469036fcba85daeab000cb",
+      "fingerprint": "1GJvJTiVshTnGwwMzoyX9TPY7oTksSifjX",
       "label": "most triumphant key",
       "networkName": "bitcoin",
       "purpose": "payment",
       "type": "bitcoin",
-      "value": "02b58b0d0c5cc2ce1d9347fa36ddd06f2c2f104b9938d182e4f69d1b5c8f305953"
+      "value": "020931aea7c71da1158285c7bb4c2f1ce7a3f7293f84002bb1394417740cd1ef55"
     },
     {
-      "_sig": "3045022100c8ea1d81fc6483b6e98f5a5744a7f6a5137ea5a4a2e65677b27409355456e66702205a0b5656183b46a64e0ce31cd3d37483c488ee5970a58bdbddd036c16bd53932",
-      "fingerprint": "mhg6yaJ2Zp8wz2hcGLMBt8n5r3XagfiQsF",
+      "_sig": "3045022100e077c53f5cf2e8735c0348a5fab8b31a7045c0ee851a52f37122bd171c33ce4302201fc22cd0542a3bea78b873f7b9174d76bdca5f3120bf73bcb75eb1338ac05f95",
+      "fingerprint": "myNsXUekAXR9VS2BXu96sCadY4pWBb36QW",
       "label": "most excellent key",
       "networkName": "testnet",
       "purpose": "payment",
       "type": "bitcoin",
-      "value": "03bd1fecbb80aa4747db2b8cce0bf39d14627a996f653c81e9255c0d75a5a9f389"
+      "value": "03a2c59522ca841543dc6b2fe64c43337f3494ac3a8a5cc1c901be94d7e28c1f6c"
     }
   ],
   "summary": "Bill's best friend",
