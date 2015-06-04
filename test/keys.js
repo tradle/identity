@@ -17,6 +17,8 @@ function testKey (type) {
     key = toKey(json)
     t.equal(key.stringifyPriv(), json.priv)
     t.equal(key.stringifyPub(), json.value)
+    t.equal(key.get('purpose'), json.purpose)
+    t.equal(key.get('type'), json.type)
     t.end()
   })
 
@@ -28,6 +30,17 @@ function testKey (type) {
     t.deepEqual(priv, json)
     pub.priv = priv.priv
     t.deepEqual(priv, json)
+    t.end()
+  })
+
+  test('convenience methods', function (t) {
+    t.equal(key.stringifyPriv(key.parsePriv(json.priv)), json.priv)
+    t.equal(key.stringifyPub(key.pubFromPriv()), json.value)
+    t.equal(key.stringifyPub(key.parsePub(json.value)), json.value)
+    t.equal(key.pubKeyString(), json.value)
+    t.equal(key.fingerprint(), json.fingerprint)
+    t.equal(key.fingerprintFromPub(key.pub()), json.fingerprint)
+    t.equal(key.type(), json.type)
     t.end()
   })
 
