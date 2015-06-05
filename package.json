@@ -14,7 +14,7 @@
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "MIT",
   "dependencies": {
-    "bitcoinjs-lib": "^1.5.6",
+    "bitcoinjs-lib": "^1.4.1",
     "elliptic": "^3.0.3",
     "extend": "^2.0.0",
     "hashmap": "^2.0.1",
