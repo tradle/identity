@@ -9,16 +9,22 @@ var AddressBook = require('../lib/addressbook')
 
 test('export/load identity', function (t) {
   var ted = Identity.fromJSON(tedPublic)
+  var ted2 = Identity.fromJSON(tedPublic)
   var photo = ted.photos()[0]
   t.ok(photo instanceof Types.Photo)
   t.equal(photo._props.type, 'headshot')
 
+  var bill = Identity.fromJSON(tedPublic).name('Bill')
   var tedWKeys = Identity.fromJSON(tedPrivate)
   var signed = tedWKeys.exportSigned()
   // export a valid json
   t.ok(signed, 'export signed identity')
   t.ok(Identity.fromJSON(signed), 'validate exported identity')
   t.throws(ted.exportSigned.bind(ted), /missing private key/)
+  t.equal(ted.hash(), ted2.hash())
+  t.ok(ted.equals(ted2))
+  t.notEqual(ted.hash(), bill.hash())
+  t.notOk(ted.equals(bill))
   t.end()
 })
 
