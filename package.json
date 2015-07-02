@@ -20,7 +20,8 @@
     "extend": "^2.0.0",
     "hashmap": "^2.0.1",
     "object.omit": "^0.2.1",
-    "otr": "git://github.com/mvayngrib/otr",
+    "otr": "git://github.com/mvayngrib/otr#master",
+    "tradle-constants": "git://github.com/mvayngrib/tradle-constants",
     "tradle-utils": "^0.1.1",
     "typeforce": "^1.0.0"
   },
