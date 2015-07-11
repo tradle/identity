@@ -1,6 +1,8 @@
 # Identity
 
-lightweight identity with an arbitrary property set and an arbitrary collection of EC keys.
+lightweight identity with an arbitrary property set and an arbitrary collection of EC keys. Compliant with Openname spec.
+
+_this module is used by [Tradle](https://github.com/tradle/about/wiki)_
 
 ## Usage
 
