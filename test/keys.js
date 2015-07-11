@@ -1,14 +1,13 @@
 var test = require('tape')
-var crypto = require('crypto')
 var toKey = require('../lib/toKey')
-var MSG = crypto.randomBytes(32).toString()
+var fixtures = require('./fixtures/sigs')
+var MSG = fixtures.msg
 
 // Object.keys(Keys)
 //   .filter(function(type) {
 //     return type !== 'Base'
 //   })
-;['DSA', 'Bitcoin']
-  .forEach(testKey)
+;['DSA', 'Bitcoin', 'EC'].forEach(testKey)
 
 function testKey (type) {
   var json = require('./fixtures/keys/' + type)
@@ -47,6 +46,10 @@ function testKey (type) {
   test('sign/verify', function (t) {
     var sig = key.sign(MSG)
     t.ok(key.verify(MSG, sig))
+    if (key.hasDeterministicSig()) {
+      t.equal(sig, fixtures[type])
+    }
+
     t.end()
   })
 }
