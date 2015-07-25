@@ -19,7 +19,6 @@
     "elliptic": "^3.0.3",
     "extend": "^2.0.0",
     "hashmap": "^2.0.1",
-    "otr": "git://github.com/mvayngrib/otr#master",
     "tradle-constants": "^1.0.0",
     "tradle-utils": "^0.1.1",
     "typeforce": "^1.0.0"
