@@ -5,5 +5,6 @@ var kiki = require('kiki')
 module.exports = extend({
   Sections: require('./lib/sectionTypes'),
   Identity: require('./lib/identity'),
-  AddressBook: require('./lib/addressbook')
+  AddressBook: require('./lib/addressbook'),
+  defaultKeySet: require('./lib/defaultKeySet')
 }, kiki)

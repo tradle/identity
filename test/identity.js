@@ -1,10 +1,41 @@
 var Identity = require('../lib/identity')
 var test = require('tape')
+var defaultKeySet = require('../lib/defaultKeySet')
+var requiredKeys = require('../lib/requiredKeys')
 var tedPublic = require('./fixtures/ted-pub')
 // var tedPrivate = require('./fixtures/ted-priv')
 var ryanPublic = require('./fixtures/ryan-pub')
 var Types = require('../lib/sectionTypes')
 var AddressBook = require('../lib/addressbook')
+
+test('create new identity', function (t) {
+  var ted = new Identity()
+    .name(tedPublic.name)
+    .location(tedPublic.location)
+    .summary(tedPublic.summary)
+
+  tedPublic.websites.forEach(ted.addWebsite, ted)
+  tedPublic.photos.forEach(ted.addPhoto, ted)
+  tedPublic.contact.forEach(ted.addContact, ted)
+  tedPublic.pubkeys.forEach(ted.addKey, ted)
+  t.deepEqual(ted.toJSON(), tedPublic)
+  t.end()
+})
+
+test('create new identity with default key set', function (t) {
+  var dude = new Identity()
+
+  defaultKeySet({
+      networkName: 'testnet'
+    })
+    .forEach(dude.addKey, dude)
+
+  requiredKeys.forEach(function (k) {
+    t.equal(dude.keys(k).length, 1)
+  })
+
+  t.end()
+})
 
 test('export/load identity', function (t) {
   var ted = Identity.fromJSON(tedPublic)
