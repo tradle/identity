@@ -3,8 +3,7 @@ var test = require('tape')
 var defaultKeySet = require('../lib/defaultKeySet')
 var requiredKeys = require('../lib/requiredKeys')
 var tedPublic = require('./fixtures/ted-pub')
-// var tedPrivate = require('./fixtures/ted-priv')
-var ryanPublic = require('./fixtures/ryan-pub')
+// var ryanPublic = require('./fixtures/ryan-pub')
 var Types = require('../lib/sectionTypes')
 var AddressBook = require('../lib/addressbook')
 
@@ -79,8 +78,8 @@ test('address book', function (t) {
   t.end()
 })
 
-test('openname compliant', function (t) {
-  var ryan = Identity.fromJSON(ryanPublic)
-  t.ok(ryan)
-  t.end()
-})
+// test('openname compliant', function (t) {
+//   var ryan = Identity.fromJSON(ryanPublic)
+//   t.ok(ryan)
+//   t.end()
+// })

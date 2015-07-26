@@ -1,8 +1,9 @@
 var fs = require('fs')
 var path = require('path')
-var Keys = require('../../lib/keys')
+// var Keys = require('kiki').toKey
 var Identity = require('../../lib/identity')
 var prettify = require('tradle-utils').prettify
+var defaultKeySet = require('../../lib/defaultKeySet')
 
 makeTeds()
 
@@ -34,31 +35,11 @@ function makeTeds () {
       type: 'skype',
       identifier: 'somebodyelse'
     })
-    .addKey(Keys.EC.gen({
-      purpose: 'update'
-    }))
-    .addKey(Keys.EC.gen({
-      purpose: 'sign'
-    }))
-    .addKey(Keys.DSA.gen({
-      purpose: 'sign'
-    }))
-    .addKey(Keys.EC.gen({
-      purpose: 'encrypt'
-    }))
-    .addKey(Keys.Bitcoin.gen({
-      networkName: 'bitcoin',
-      label: 'most triumphant key',
-      purpose: 'payment'
-    }))
-    .addKey(Keys.Bitcoin.gen({
-      networkName: 'testnet',
-      label: 'most excellent key',
-      purpose: 'payment'
-    }))
 
-  var pub = ted.exportSigned()
-  var priv = ted.toJSON(true)
+  defaultKeySet({
+    networkName: 'testnet'
+  }).forEach(ted.addKey, ted)
+
+  var pub = ted.toJSON()
   fs.writeFile(path.join(__dirname, '../fixtures/ted-pub.json'), prettify(pub))
-  fs.writeFile(path.join(__dirname, '../fixtures/ted-priv.json'), prettify(priv))
 }
