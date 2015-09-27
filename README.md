@@ -7,10 +7,10 @@ _this module is used by [Tradle](https://github.com/tradle/about/wiki)_
 ## Usage
 
 ```js
-var midentity = require('midentity');
-var Identity = midentity.Identity;
+var midentity = require('midentity')
+var Identity = midentity.Identity
 var AddressBook = midentity.AddressBook
-var Keys = midentity.Keys;
+var Keys = require('kiki').Keys
 var ted = new Identity()
   .name({
     firstName: 'Ted',
@@ -63,19 +63,19 @@ var keys = defaultKeySet({
 
 keys.forEach(ted.addKey, ted)
   
-var addressBook = new AddressBook();
-addressBook.addIndex({ name: 'label', unique: true });
-addressBook.addIndex({ name: 'networkName', unique: false });
-addressBook.add(ted);
-var keyMatch = addressBook.byKey(ted.keys()[0]);
-var labelMatch = addressBook.byLabel('most triumphant key');
-var networkMatch = addressBook.byNetwork('testnet');
+var addressBook = new AddressBook()
+addressBook.addIndex({ name: 'label', unique: true })
+addressBook.addIndex({ name: 'networkName', unique: false })
+addressBook.add(ted)
+var keyMatch = addressBook.byKey(ted.keys()[0])
+var labelMatch = addressBook.byLabel('most triumphant key')
+var networkMatch = addressBook.byNetwork('testnet')
 ```
 
 ### toJSON()
 
 ```js
-var priv = ted.toJSON();
+var priv = ted.toJSON()
 ```
 ```json
 {
