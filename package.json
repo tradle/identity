@@ -1,5 +1,5 @@
 {
-  "name": "midentity",
+  "name": "@tradle/midentity",
   "version": "1.0.7",
   "description": "identity on the tradle network",
   "main": "index.js",
@@ -14,14 +14,14 @@
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "MIT",
   "dependencies": {
-    "bitcoinjs-lib": "mvayngrib/bitcoinjs-lib#lazy1.5.7",
+    "@tradle/bitcoinjs-lib": "^1.5.7",
+    "@tradle/constants": "^1.1.3",
+    "@tradle/kiki": "^1.1.7",
+    "@tradle/utils": "^0.2.4",
     "debug": "^2.2.0",
     "elliptic": "^3.1.0",
     "extend": "^2.0.0",
     "hashmap": "^2.0.1",
-    "kiki": "^1.1.3",
-    "tradle-constants": "^1.0.0",
-    "tradle-utils": "^0.2.2",
     "typeforce": "^1.0.0"
   },
   "devDependencies": {
