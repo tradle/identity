@@ -1,6 +1,6 @@
 {
   "name": "midentity",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "identity on the tradle network",
   "main": "index.js",
   "scripts": {
