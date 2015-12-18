@@ -1,6 +1,6 @@
 {
   "name": "@tradle/identity",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "identity on the tradle network",
   "main": "index.js",
   "scripts": {
