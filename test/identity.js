@@ -29,6 +29,11 @@ test('create new identity with default key set', function (t) {
     })
     .forEach(dude.addKey, dude)
 
+  var json = dude.toJSON()
+  t.ok(Identity.validate(json))
+  json.pubkeys.pop()
+  t.notOk(Identity.validate(json))
+
   requiredKeys.forEach(function (k) {
     t.equal(dude.keys(k).length, 1)
   })
