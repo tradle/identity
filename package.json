@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@tradle/bitcoinjs-lib": "^1.5.7",
-    "@tradle/constants": "^1.1.3",
+    "@tradle/constants": ">=1.1.3",
     "@tradle/kiki": "^1.1.11",
     "@tradle/utils": "^1.0.0",
     "debug": "^2.2.0",
